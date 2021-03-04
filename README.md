@@ -9,11 +9,11 @@
 </p>
 
 
-La idea general de la aplicación es que se puedan ver distintas razas de perro junto con información relevante de las mismas utilizando la api externa [the dog api](https://thedogapi.com/) y a partir de ella poder, entre otras cosas:
+La aplicación muestra distintas razas de perro junto con información relevante de las mismas utilizando la api externa [the dog api](https://thedogapi.com/) y a partir de ella, se puede:
 
   - Buscar perros
   - Filtrarlos / Ordenarlos
-  - Agregar nuevos perros
+  - Crear nuevos perros
   - Crear nuevos temperamentos
 
 Para las funcionalidades de filtrado y ordenamiento NO se utilizaron los endpoints de la API externa que ya devuelven los resultados filtrados u ordenados.

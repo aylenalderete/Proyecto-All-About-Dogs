@@ -8,7 +8,17 @@
   <img height="200" src="./dog.png" />
 </p>
 
-## Objetivos del Proyecto
+
+La idea general de la aplicación es que se puedan ver distintas razas de perro junto con información relevante de las mismas utilizando la api externa [the dog api](https://thedogapi.com/) y a partir de ella poder, entre otras cosas:
+
+  - Buscar perros
+  - Filtrarlos / Ordenarlos
+  - Agregar nuevos perros
+  - Crear nuevos temperamentos
+
+Para las funcionalidades de filtrado y ordenamiento NO se utilizaron los endpoints de la API externa que ya devuelven los resultados filtrados u ordenados.
+
+# Objetivos:
 
 - Construir una App utlizando React, Redux, Node y Sequelize.
 - Afirmar y conectar los conceptos aprendidos en la carrera.
@@ -16,145 +26,76 @@
 - Aprender y practicar el workflow de GIT.
 - Usar y practicar testing.
 
-## Horarios y Fechas
+# Descripción y funcionalidades:
 
-El proyecto tendrá una duración máxima de dos semanas. En el caso de que completan todas las tareas antes de dicho lapso podrán avisar a su Instructor para coordinar una fecha de presentación del trabajo (DEMO).
+__Pagina inicial__: landing page con
+- Imagen de fondo representativa al proyecto
+- Botón para ingresar al home (`Ruta principal`)
 
-## Comenzando
-
- 1. Forkear el repositorio para tener una copia del mismo en sus cuentas
- 2. Clonar el repositorio en sus computadoras para comenzar a trabajar
-
-Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
-
-__IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
-
-Actualmente las versiónes necesarias son:
-
- * __Node__: 12.18.3 o mayor
- * __NPM__: 6.14.16 o mayor
-
-Para verificar que versión tienen instalada:
-
-> node -v
->
-> npm -v
-
-## BoilerPlate
-
-El boilerplate cuenta con dos carpetas: `api` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
-
-En `api` crear un archivo llamado: `.env` que tenga la siguiente forma:
-
-```
-DB_USER=usuariodepostgres
-DB_PASSWORD=passwordDePostgres
-DB_HOST=localhost
-```
-
-Reemplazar `usuariodepostgres` y `passwordDePostgres` con tus propias credenciales para conectarte a postgres. Este archivo va ser ignorado en la subida a github, ya que contiene información sensible (las credenciales).
-
-Adicionalmente será necesario que creen desde psql una base de datos llamada `dogs`
-
-El contenido de `client` fue creado usando: Create React App.
-
-## Enunciado
-
-La idea general es crear una aplicación en la cual se puedan ver distintas razas de perro junto con información relevante de las mismas utilizando la api externa [the dog api](https://thedogapi.com/) y a partir de ella poder, entre otras cosas:
-
-  - Buscar perros
-  - Filtrarlos / Ordenarlos
-  - Agregar nuevos perros
-
-__IMPORTANTE__: Para las funcionalidades de filtrado y ordenamiento NO pueden utilizar los endpoints de la API externa que ya devuelven los resultados filtrados u ordenados sino que deben realizarlo ustedes mismos. En particular alguno de los ordenamientos o filtrados debe si o si realizarse desde el frontend.
-
-__IMPORTANTE__: Para poder utilizar esta API externa es necesario crearse una cuenta para obtener una API Key que luego debera ser incluida en todos los request que hagamos a rawg simplemente agregando `?api_key={YOUR_API_KEY}` al final de cada endpoint. Agregar la clave en el archivo `.env` para que la misma no se suba al repositorio por cuestiones de seguridad y utilizarla desde allí.
-
-### Requerimientos mínimos:
-
-A continuación se detallaran los requerimientos mínimos para la aprobación del proyecto individial. Aquellos que deseen agregar más funcionalidades podrán hacerlo. En cuanto al diseño visual no va a haber wireframes ni prototipos prefijados sino que tendrán libertad de hacerlo a su gusto pero tienen que aplicar los conocimientos de estilos vistos en el curso para que quede agradable a la vista.
-
-__IMPORTANTE__: No se permitirá utilizar librerías externas para aplicar estilos a la aplicación. Tendrán que utilizar CSS con algunas de las opciones que vimos en dicha clase (CSS puro, CSS Modules o Styled Components)
-
-#### Tecnologías necesarias:
-- [x] React
-- [x] Redux
-- [x] Express
-- [x] Sequelize - Postgres
-
-#### Frontend
-
-Se debe desarrollar una aplicación de React/Redux que contenga las siguientes pantallas/rutas.
-
-__Pagina inicial__: deben armar una landing page con
-- [x] Alguna imagen de fondo representativa al proyecto
-- [x] Botón para ingresar al home (`Ruta principal`)
-
-__Ruta principal__: debe contener
-- [x] Input de búsqueda para encontrar razas de perros por nombre
-- [x] Área donde se verá el listado de razas de perros. Deberá mostrar su:
+__Ruta principal__: 
+- Input de búsqueda para encontrar razas de perros por nombre.
+- Área donde se ve el listado de razas de perros. Cada tarjeta muestra:
   - Imagen
   - Nombre
   - Temperamento          
-- [ ] Botones/Opciones para filtrar por por temperamento y por raza existente o agregada por nosotros
-- [ ] Botones/Opciones para ordenar tanto ascendentemente como descendentemente las razas de perro por orden alfabético y por peso
-- [ ] Paginado para ir buscando y mostrando las siguientes razas
+- Botones/Opciones para filtrar por temperamento y por raza existente o agregada por el usuario.
+- Botones/Opciones para ordenar tanto ascendentemente como descendentemente las razas de perro por orden alfabético y por peso.
+- Paginado para ir buscando y mostrando las siguientes razas.
 
-__Ruta de detalle de raza de perro__: debe contener
-- [x] Los campos mostrados en la ruta principal para cada raza (imagen, nombre y temperamento)
-- [x] Altura
-- [x] Peso
-- [x] Años de vida
+__Ruta de detalle de raza de perro__: 
+- Campos mostrados en la ruta principal para cada raza (imagen, nombre y temperamento)
+- Altura
+- Peso
+- Años de vida
 
-__Ruta de creación de raza de perro__: debe contener
-- [x] Un formulario __controlado__ con los siguientes campos
+__Ruta de creación de raza__:
+- Contiene un formulario __controlado__ con los siguientes campos
   - Nombre
-  - Altura (Diferenciar entre macho y hembra)
-  - Peso (Diferenciar entre macho y hembra)
+  - Altura 
+  - Peso 
   - Años de vida
-- [x] Posibilidad de seleccionar/agregar temperamento
-- [x] Botón/Opción para crear una nueva raza de perro
+- Posibilidad de seleccionar/agregar temperamento
+- Botón/Opción para crear una nueva raza de perro
 
-#### Base de datos
+# Base de datos
 
-El modelo de la base de datos deberá tener las siguientes entidades (Aquellas propiedades marcadas con asterísco deben ser obligatorias):
+El modelo de la base de datos tiene las siguientes entidades: PERRO Y TEMPERAMENTO.
 
-- [x] Raza con las siguientes propiedades:
-  - ID: * No puede ser un ID de una raza de perro ya existente en la API externa
-  - Nombre *
-  - Altura *
-  - Peso *
+- Perro con las siguientes propiedades:
+  - ID
+  - Nombre 
+  - Altura 
+  - Peso 
   - Años de vida
-- [x] Temperamento con las siguientes propiedades:
+  - 
+- Temperamento con las siguientes propiedades:
   - ID
   - Nombre
 
-La relación entre ambas entidades debe ser de muchos a muchos ya que una raza de perro puede tener varios "temperamentos" en simultaneo y, a su vez, un "temperamento" puede corresponder a múltiples razas de perro distintas. Por ejemplo la raza `pug` es docil, inteligente y sociable (entre otras). Pero a su vez existen otras razas de perro que también son sociables o inteligentes.
+La relación entre ambas entidades es de muchos a muchos ya que una raza de perro puede tener varios "temperamentos" en simultaneo y, a su vez, un "temperamento" puede corresponder a múltiples razas de perro distintas. Por ejemplo la raza `pug` es docil, inteligente y sociable (entre otras). Pero a su vez existen otras razas de perro que también son sociables o inteligentes.
 
-#### Backend
+# Backend
 
-Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
+Servidor en Node/Express con las siguientes rutas:
 
-__IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes.
-
-- [x] __GET /dogs__:
-  - Obtener un listado de las primeras 8 razas de perro
-  - Debe devolver solo los datos necesarios para la ruta principal
-- [x] __GET /dogs?name="..."__:
-  - Obtener un listado de las primeras 8 razas de perro que contengan la palabra ingresada como query parameter
-  - Si no existe ninguna raza de perro mostrar un mensaje adecuado
-- [x] __GET /dogs/{idRaza}__:
-  - Obtener el detalle de una raza de perro en particular
-  - Debe traer solo los datos pedidos en la ruta de detalle de raza de perro
-  - Incluir los temperamentos asociados
-- [x] __GET /temperament__:
-  - Obtener todos los temperamentos posibles
-  - En una primera instancia deberán obtenerlos desde la API externa y guardarlos en su propia base de datos y luego ya utilizarlos desde allí
-- [x] __POST /dog__:
+- __GET /dogs__:
+  - Obtiene un listado de las primeras 8 razas de perro
+  - Devuelve solo los datos necesarios para la ruta principal
+- __GET /dogs?name="..."__:
+  - Obtiene un listado de las primeras 8 razas de perro que contengan la palabra ingresada como query parameter
+  - Si no existe ninguna raza de perro muestra un mensaje adecuado
+-  __GET /dogs/{idRaza}__:
+  - Obtiene el detalle de una raza de perro en particular
+  - Trae solo los datos pedidos en la ruta de detalle de raza de perro
+  - Incluye los temperamentos asociados
+- __GET /temperament__:
+  - Obtiene todos los temperamentos posibles
+  - En una primera instancia se obtiene desde la API externa y los guardamos en la base de datos y luego ya los utilizamos desde allí
+- __POST /dog__:
   - Recibe los datos recolectados desde el formulario controlado de la ruta de creación de raza de perro por body
   - Crea una raza de perro en la base de datos
 
 #### Testing
-- [ ] Al menos tener un componente del frontend con sus tests respectivos
-- [ ] Al menos tener una ruta del backend con sus tests respectivos
-- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
+
+- Ruta del backend
+- Modelo de la base de datos

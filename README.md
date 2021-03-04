@@ -77,55 +77,55 @@ A continuación se detallaran los requerimientos mínimos para la aprobación de
 __IMPORTANTE__: No se permitirá utilizar librerías externas para aplicar estilos a la aplicación. Tendrán que utilizar CSS con algunas de las opciones que vimos en dicha clase (CSS puro, CSS Modules o Styled Components)
 
 #### Tecnologías necesarias:
-- [ ] React
-- [ ] Redux
-- [ ] Express
-- [ ] Sequelize - Postgres
+- [x] React
+- [x] Redux
+- [x] Express
+- [x] Sequelize - Postgres
 
 #### Frontend
 
 Se debe desarrollar una aplicación de React/Redux que contenga las siguientes pantallas/rutas.
 
 __Pagina inicial__: deben armar una landing page con
-- [ ] Alguna imagen de fondo representativa al proyecto
-- [ ] Botón para ingresar al home (`Ruta principal`)
+- [x] Alguna imagen de fondo representativa al proyecto
+- [x] Botón para ingresar al home (`Ruta principal`)
 
 __Ruta principal__: debe contener
-- [ ] Input de búsqueda para encontrar razas de perros por nombre
-- [ ] Área donde se verá el listado de razas de perros. Deberá mostrar su:
+- [x] Input de búsqueda para encontrar razas de perros por nombre
+- [x] Área donde se verá el listado de razas de perros. Deberá mostrar su:
   - Imagen
   - Nombre
-  - Temperamento
+  - Temperamento          
 - [ ] Botones/Opciones para filtrar por por temperamento y por raza existente o agregada por nosotros
 - [ ] Botones/Opciones para ordenar tanto ascendentemente como descendentemente las razas de perro por orden alfabético y por peso
 - [ ] Paginado para ir buscando y mostrando las siguientes razas
 
 __Ruta de detalle de raza de perro__: debe contener
-- [ ] Los campos mostrados en la ruta principal para cada raza (imagen, nombre y temperamento)
-- [ ] Altura
-- [ ] Peso
-- [ ] Años de vida
+- [x] Los campos mostrados en la ruta principal para cada raza (imagen, nombre y temperamento)
+- [x] Altura
+- [x] Peso
+- [x] Años de vida
 
 __Ruta de creación de raza de perro__: debe contener
-- [ ] Un formulario __controlado__ con los siguientes campos
+- [x] Un formulario __controlado__ con los siguientes campos
   - Nombre
   - Altura (Diferenciar entre macho y hembra)
   - Peso (Diferenciar entre macho y hembra)
   - Años de vida
-- [ ] Posibilidad de seleccionar/agregar temperamento
-- [ ] Botón/Opción para crear una nueva raza de perro
+- [x] Posibilidad de seleccionar/agregar temperamento
+- [x] Botón/Opción para crear una nueva raza de perro
 
 #### Base de datos
 
 El modelo de la base de datos deberá tener las siguientes entidades (Aquellas propiedades marcadas con asterísco deben ser obligatorias):
 
-- [ ] Raza con las siguientes propiedades:
+- [x] Raza con las siguientes propiedades:
   - ID: * No puede ser un ID de una raza de perro ya existente en la API externa
   - Nombre *
   - Altura *
   - Peso *
   - Años de vida
-- [ ] Temperamento con las siguientes propiedades:
+- [x] Temperamento con las siguientes propiedades:
   - ID
   - Nombre
 
@@ -137,20 +137,20 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 
 __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes.
 
-- [ ] __GET /dogs__:
+- [x] __GET /dogs__:
   - Obtener un listado de las primeras 8 razas de perro
   - Debe devolver solo los datos necesarios para la ruta principal
-- [ ] __GET /dogs?name="..."__:
+- [x] __GET /dogs?name="..."__:
   - Obtener un listado de las primeras 8 razas de perro que contengan la palabra ingresada como query parameter
   - Si no existe ninguna raza de perro mostrar un mensaje adecuado
-- [ ] __GET /dogs/{idRaza}__:
+- [x] __GET /dogs/{idRaza}__:
   - Obtener el detalle de una raza de perro en particular
   - Debe traer solo los datos pedidos en la ruta de detalle de raza de perro
   - Incluir los temperamentos asociados
-- [ ] __GET /temperament__:
+- [x] __GET /temperament__:
   - Obtener todos los temperamentos posibles
   - En una primera instancia deberán obtenerlos desde la API externa y guardarlos en su propia base de datos y luego ya utilizarlos desde allí
-- [ ] __POST /dog__:
+- [x] __POST /dog__:
   - Recibe los datos recolectados desde el formulario controlado de la ruta de creación de raza de perro por body
   - Crea una raza de perro en la base de datos
 

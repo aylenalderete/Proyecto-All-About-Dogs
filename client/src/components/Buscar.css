@@ -1,0 +1,49 @@
+.fondo-buscar {
+    background-image: url("../assets/Group8.png");
+    height: 1400px;
+    width: 1290px;
+    margin: 0px;
+}
+
+.dogs-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1100px;
+    justify-content: space-evenly;
+    margin-top: 31%;
+    margin-left: 6%;
+}
+
+.container-todos-select {
+    display: flex;
+    height: 18px;
+    padding-top: 17px;
+}
+
+.select-container {
+    width: 380px;
+}
+
+.boton-agregar-perro {
+    background-color: #6D8BE8;
+    border-radius: 40px;
+    border: 1px solid;
+    border-color: #6D8BE8;
+    height: 54px;
+    width: 56px;
+    color: white;
+    font-weight: 800;
+    font-size: 11px;
+}
+
+select {
+    width: 160px;
+    background: transparent;
+    border: 2px solid;
+    border-radius: 40px;
+    border-color: #6D8BE8;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+}
